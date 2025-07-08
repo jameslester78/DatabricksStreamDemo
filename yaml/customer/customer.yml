@@ -1,0 +1,18 @@
+table_name: customer
+details:
+    schema: > 
+        StructType([
+        StructField("id", StringType(), True),
+        StructField("creation_date", StringType(), True),
+        StructField("firstname", StringType(), True),
+        StructField("lastname", StringType(), True),
+        StructField("email", StringType(), True),
+        StructField("address", StringType(), True),
+        StructField("gender", StringType(), True)])
+    source: "/Volumes/main/default/my_volume/user_csv/"
+    options:
+        header: "true"
+        cloudFiles.format: "csv"
+        multiLine: "true"
+        quote: "\""
+        escape: "\""
